@@ -17,7 +17,11 @@ To test local web applications, write native Python Playwright scripts.
 
 ```
 User task → Is it static HTML?
-    ├─ Yes → Read HTML file directly to identify selectors
+    ├─ Yes (static HTML) →
+    │    1. Read the HTML file using the Read tool
+    │    2. Identify selectors in priority order: #id > [data-testid] > role= > text= > CSS class
+    │    3. Write Playwright script using discovered selectors
+    │    4. If selectors are ambiguous or appear dynamic, treat as a dynamic app
     │         ├─ Success → Write Playwright script using selectors
     │         └─ Fails/Incomplete → Treat as dynamic (below)
     │

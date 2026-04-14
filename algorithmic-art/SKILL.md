@@ -23,7 +23,7 @@ To begin, create an ALGORITHMIC PHILOSOPHY (not static images or templates) that
 ### THE CRITICAL UNDERSTANDING
 - What is received: Some subtle input or instructions by the user to take into account, but use as a foundation; it should not constrain creative freedom.
 - What is created: An algorithmic philosophy/generative aesthetic movement.
-- What happens next: The same version receives the philosophy and EXPRESSES IT IN CODE - creating p5.js sketches that are 90% algorithmic generation, 10% essential parameters.
+- What happens next: In the implementation phase, you will express the philosophy in code — creating p5.js sketches that are 90% algorithmic generation, 10% essential parameters.
 
 Consider this approach:
 - Write a manifesto for a generative art movement
@@ -47,7 +47,7 @@ To capture the ALGORITHMIC essence, express how this philosophy manifests throug
 **CRITICAL GUIDELINES:**
 - **Avoid redundancy**: Each algorithmic aspect should be mentioned once. Avoid repeating concepts about noise theory, particle dynamics, or mathematical principles unless adding new depth.
 - **Emphasize craftsmanship REPEATEDLY**: The philosophy MUST stress multiple times that the final algorithm should appear as though it took countless hours to develop, was refined with care, and comes from someone at the absolute top of their field. This framing is essential - repeat phrases like "meticulously crafted algorithm," "the product of deep computational expertise," "painstaking optimization," "master-level implementation."
-- **Leave creative space**: Be specific about the algorithmic direction, but concise enough that the next Claude has room to make interpretive implementation choices at an extremely high level of craftsmanship.
+- **Leave creative space**: Be specific about the algorithmic direction, but concise enough to leave room for interpretive implementation choices at an extremely high level of craftsmanship.
 
 The philosophy must guide the next version to express ideas ALGORITHMICALLY, not through static images. Beauty lives in the process, not the final frame.
 
@@ -79,9 +79,9 @@ Algorithmic expression: Randomized circle packing or Voronoi tessellation. Start
 - **ALGORITHMIC PHILOSOPHY**: Creating a computational worldview to be expressed through code
 - **PROCESS OVER PRODUCT**: Always emphasize that beauty emerges from the algorithm's execution - each run is unique
 - **PARAMETRIC EXPRESSION**: Ideas communicate through mathematical relationships, forces, behaviors - not static composition
-- **ARTISTIC FREEDOM**: The next Claude interprets the philosophy algorithmically - provide creative implementation room
+- **ARTISTIC FREEDOM**: Interpret the philosophy algorithmically — let the philosophy guide implementation choices
 - **PURE GENERATIVE ART**: This is about making LIVING ALGORITHMS, not static images with randomness
-- **EXPERT CRAFTSMANSHIP**: Repeatedly emphasize the final algorithm must feel meticulously crafted, refined through countless iterations, the product of deep expertise by someone at the absolute top of their field in computational aesthetics
+- **EXPERT CRAFTSMANSHIP**: The implementation must demonstrate mastery — every parameter purposeful, every color intentional, every pattern refined
 
 **The algorithmic philosophy should be 4-6 paragraphs long.** Fill it with poetic computational philosophy that brings together the intended vision. Avoid repeating the same points. Output this algorithmic philosophy as a .md file.
 
@@ -219,8 +219,6 @@ The HTML artifact contains everything: p5.js (from CDN), the algorithm, paramete
 ---
 
 ## INTERACTIVE ARTIFACT CREATION
-
-**REMINDER: `templates/viewer.html` should have already been read (see STEP 0). Use that file as the starting point.**
 
 To allow exploration of the generative art, create a single, self-contained HTML artifact. Ensure this artifact works immediately in claude.ai or any browser - no setup required. Embed everything inline.
 
@@ -398,8 +396,8 @@ This skill includes helpful templates and documentation:
   - NOT a pattern menu - use these principles to build unique algorithms
   - Embed algorithms inline in the HTML artifact (don't create separate .js files)
 
-**Critical reminder**:
+**Remember**:
 - The **template is the STARTING POINT**, not inspiration
 - The **algorithm is where to create** something unique
-- Don't copy the flow field example - build what the philosophy demands
-- But DO keep the exact UI structure and Anthropic branding from the template
+- Don't copy the flow field example — build what the philosophy demands
+- Keep the exact UI structure and Anthropic branding from the template

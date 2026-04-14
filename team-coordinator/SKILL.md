@@ -38,7 +38,7 @@ Invoke `software-architect` or `orchestrator` to:
 
 ### 3. ITERATIVE IMPLEMENTATION
 Break down the phase into small tasks and delegate:
-- **Frontend:** Use `senior-aesthetic-engineer` for high-level interfaces and `ux-design-expert` for usability.
+- **Frontend:** Use `senior-frontend-engineer` for production-grade UI architecture and high-fidelity interfaces, and `ux-design-expert` for usability and user flows.
 - **Backend:** Use `backend-coder` for server-side logic and API.
 - **Standards:** Use `bem-refactor` if you detect style clutter.
 
@@ -61,8 +61,9 @@ Invoke:
 # 🔐 GOVERNANCE RULES
 1. **No Implementation:** You do not edit code files directly if a specialized skill is available.
 2. **Atomicity:** Tasks must be small enough to be reversible.
-3. **Context Awareness:** Before acting, read project rules (`.clauderc`, `CONTRIBUTING.md`, etc.).
+3. **Context Awareness:** Before acting, read project rules (`CLAUDE.md`, `CONTRIBUTING.md`, `.github/CONTRIBUTING.md` if present).
 4. **Isolation:** Ensure data access is always restricted to the current user's scope.
+5. **Skill Unavailability:** If a required skill is not available in the environment, notify the user ("Skill X is not available — proceeding with inline implementation using its documented standards") and proceed with direct implementation as a fallback.
 
 ---
 

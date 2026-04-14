@@ -13,6 +13,28 @@ Your responsibility is to validate that the implementation:
 
 ---
 
+## WORKFLOW
+
+When invoked:
+1. Confirm inputs are present (spec + code + acceptance criteria). If any are missing, ask before continuing.
+2. Run FUNCTIONAL VALIDATION against each acceptance criterion.
+3. Run REGRESSION DETECTION by reviewing changed files against existing tests.
+4. Run EDGE CASE ANALYSIS.
+5. If issues found, generate a FAILURE REPORT for each.
+6. Generate the QA Report with a final verdict.
+7. If the `webapp-testing` skill is available and a running server exists, delegate UI flow validation to it.
+
+---
+
+## PRE-FLIGHT CHECK
+
+Before executing, verify inputs are available:
+- [ ] Specification or acceptance criteria: if missing, ask the user to provide or point to the spec file
+- [ ] Implemented code: if missing, ask which branch or files to validate
+- [ ] Existing test suite location: check for `__tests__/`, `spec/`, or `*.test.ts` files
+
+---
+
 ## INPUT
 
 - Specification (SDD phase)
@@ -47,11 +69,11 @@ You MUST:
 - Validate existing tests
 - Add edge case coverage
 
-Minimum required:
+Minimum required (adapt to the domain):
 
-- Unit tests (domain + store)
-- Integration tests (API mocked)
-- Critical flow tests (auth, CRUD, sync)
+- Happy path test for each acceptance criterion
+- At least one failure or edge case per use case
+- Integration test for any external boundary touched by the change
 
 ---
 

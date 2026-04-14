@@ -30,24 +30,12 @@ and updates all matching references in JSX/TSX files. Always shows a diff before
 
 ### Step 1 — Discover files
 
-Collect all target files using `find`, excluding ignored paths:
+Use the Glob tool to discover files, excluding `node_modules` and `vendor`:
 
-```bash
-# Style files
-find . \
-  -not \( -path "*/node_modules/*" -prune \) \
-  -not \( -path "*/vendor/*" -prune \) \
-  -not -name "*.min.css" \
-  \( -name "*.css" -o -name "*.scss" -o -name "*.sass" \) \
-  -print
+- Style files: pattern `**/*.css`, `**/*.scss`, `**/*.sass` (exclude `*.min.css`)
+- JSX/TSX files: pattern `**/*.jsx`, `**/*.tsx`
 
-# JSX/TSX reference files
-find . \
-  -not \( -path "*/node_modules/*" -prune \) \
-  -not \( -path "*/vendor/*" -prune \) \
-  \( -name "*.jsx" -o -name "*.tsx" \) \
-  -print
-```
+Run separate Glob calls for each pattern. Glob results are sorted by modification time and respect tool permissions — do not use `find` or `rg` for this step.
 
 Before processing each style file, check for the ignore directive:
 - If the file contains `// @bem-ignore` (anywhere), skip it entirely and note it in the log.
@@ -143,10 +131,11 @@ Then show the **ambiguity log** if any entries exist:
   highlight     → highlight      (treated as Block — no clear parent found)
 ```
 
-**Ask the user before continuing:**
-> "Here's the full diff. Does everything look right? Should I apply these changes? (yes / no / let me adjust)"
+Ask the user: "Here's the full diff. Apply these changes? (yes / no / adjust)"
 
-If the user wants to adjust, discuss the specific renames and update the map before applying.
+- **yes** → proceed to Step 5
+- **no** → discard all changes, report "BEM refactor cancelled — no files were modified"
+- **adjust** → discuss specific renames, rebuild the diff, re-present before applying
 
 ---
 

@@ -13,6 +13,15 @@ Your goal is to ensure the system remains:
 
 ---
 
+## PRE-FLIGHT CHECK
+
+Before executing, verify inputs are available:
+- [ ] Current codebase: identify which files/modules are in scope
+- [ ] Recent changes: check git log or ask user which phase/PR to audit
+- [ ] SDD specification: if missing, proceed with code-only analysis and note the gap
+
+---
+
 ## INPUT
 
 - Current codebase
@@ -81,8 +90,19 @@ For each issue:
 
 ### Architecture Health
 
-- Score: /10
-- Summary
+Score each dimension and compute overall:
+
+| Dimension | Weight | Score (0–10) |
+|-----------|--------|--------------|
+| Layer separation | 25% | |
+| Coupling | 25% | |
+| Testability | 20% | |
+| DRY / Repetition | 15% | |
+| Naming clarity | 15% | |
+
+**Overall: [weighted average] / 10**
+
+Summary: one paragraph on the system's architectural state.
 
 ---
 
@@ -109,6 +129,14 @@ For each issue:
 - Do NOT rewrite everything
 - Prefer incremental refactors
 - Respect existing functionality
+
+---
+
+## HANDOFF
+
+After producing the refactor plan:
+- If integrated with `orchestrator` or `team-coordinator`: output the plan in their expected format and flag which issues are BLOCKING (must fix now) vs ADVISORY (improve in next iteration).
+- If standalone: present the plan to the user and ask "Should I delegate any of these refactors to a specialized skill?"
 
 ---
 

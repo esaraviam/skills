@@ -8,6 +8,19 @@ This skill guides the creation of distinctive, production-grade backend systems 
 
 The user provides backend requirements: an API, service, system, or architecture. They may include context about business rules, scale, or constraints.
 
+## Workflow
+
+When invoked:
+1. **Understand** — Identify: domain, constraints, scale, existing codebase (read relevant files if available)
+2. **Decide** — Choose an architectural pattern and justify it in 1 paragraph
+3. **Structure** — Propose folder structure before writing any code
+4. **Implement** — Generate typed, production-grade code
+5. **Explain** — Summarize key decisions and trade-offs
+
+If the request is vague (no domain or constraints given), ask ONE clarifying question before step 2.
+
+---
+
 ## Backend Design Thinking
 
 Before coding, deeply understand the problem and commit to a **clear architectural direction**:
@@ -134,6 +147,8 @@ Use a clear and scalable structure:
 ---
 
 ## Technology Preferences
+
+**If the user specifies a different language or runtime** (Python, Go, Rust, etc.), adapt the architectural principles from this skill to that stack. The design thinking, layering, and quality standards apply universally — only the syntax and tooling change.
 
 Default stack (unless specified otherwise):
 

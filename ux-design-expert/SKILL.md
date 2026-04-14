@@ -132,7 +132,7 @@ When designing flows or user journeys:
 2. Identify the 3–5 key decision points
 3. Reduce steps — every extra screen is a drop-off risk
 4. Show empty states, loading states, and error states — not just happy path
-5. Use the Visualizer tool to create inline flow diagrams when helpful
+5. Use **Mermaid diagrams** (fenced code blocks with ```mermaid) to represent flows and user journeys inline. For simple flows, ASCII art is acceptable.
 
 ---
 
@@ -154,13 +154,17 @@ When designing flows or user journeys:
 
 ---
 
-## Quality Checklist (run mentally before delivering)
+## Quality Gate (required before delivery)
 
-- [ ] Does it work on a 375px mobile screen?
-- [ ] Is the primary CTA immediately obvious?
-- [ ] Is text contrast ≥ 4.5:1 for body, ≥ 3:1 for large text?
-- [ ] Are interactive elements visually distinct (not just color)?
-- [ ] Is whitespace consistent with the 8px grid?
-- [ ] Does the design have a clear visual hierarchy (1 hero element, supporting elements)?
-- [ ] Are hover/focus/active states defined?
-- [ ] Would a non-designer understand what to do on this screen in under 5 seconds?
+Run this checklist and include a brief "Quality Gate" section in your output:
+
+- Mobile (375px): [pass / issue: ...]
+- CTA clarity: [pass / issue: ...]
+- Contrast (≥4.5:1 body, ≥3:1 large): [pass / issue: ...]
+- Interactive states defined: [pass / issue: ...]
+- 8px spacing grid: [pass / issue: ...]
+- Visual hierarchy: [pass / issue: ...]
+- Hover/focus/active states: [pass / issue: ...]
+- 5-second clarity test: [pass / issue: ...]
+
+If any item fails, fix it before delivering.

@@ -18,9 +18,9 @@ To apply consistent, professional styling to presentation slide decks, use this 
 
 ## Usage Instructions
 
-To apply styling to a slide deck or other artifact:
+To apply styling to any artifact (slides, HTML pages, reports, documentation):
 
-1. **Show the theme showcase**: Display the `theme-showcase.pdf` file to allow users to see all available themes visually. Do not make any modifications to it; simply show the file for viewing.
+1. **Show the theme showcase**: Read `theme-showcase.pdf` using the Read tool (it will render visually in the conversation). If the user is in a non-visual context, present the 10 theme names and descriptions inline from the ## Themes Available section below.
 2. **Ask for their choice**: Ask which theme to apply to the deck
 3. **Wait for selection**: Get explicit confirmation about the chosen theme
 4. **Apply the theme**: Once a theme has been chosen, apply the selected theme's colors and fonts to the deck/artifact

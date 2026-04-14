@@ -28,5 +28,8 @@ To write any internal communication:
 
 If the communication type doesn't match any existing guideline, ask for clarification or more context about the desired format.
 
-## Keywords
-3P updates, company newsletter, company comms, weekly update, faqs, common questions, updates, internal comms
+4. **If the guideline file does not exist**: use the following defaults:
+   - Tone: professional, direct, friendly
+   - Structure: Context → Key Points → Action Items → Next Steps
+   - Length: as brief as the content allows
+   - Ask the user for their preferred format if they have a template in mind

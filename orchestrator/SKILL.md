@@ -1,5 +1,5 @@
 ---
-name: spec-driven-orchestrator
+name: orchestrator
 description: >
   Orchestrates multi-phase software delivery using a spec-driven, iterative approach.
   Acts as Tech Lead, Software Architect, Code Reviewer, and CI Gatekeeper in one.
@@ -83,10 +83,10 @@ You are responsible for enforcing these boundaries. If any is violated, **STOP a
 
 | Rule | Description |
 |------|-------------|
-| Domain purity | Domain layer MUST NOT depend on Supabase or any infra library |
-| Infra isolation | Supabase ONLY lives in `infrastructure/` or `api/` layers |
+| Domain purity | Domain layer MUST NOT depend on any infrastructure library (DB clients, ORMs, HTTP clients) |
+| Infra isolation | All infrastructure adapters MUST live in `infrastructure/` or `adapters/` layer only |
 | UI isolation | UI MUST NOT access the database directly |
-| Data scoping | All data MUST be scoped by `userId` |
+| Data scoping | All data MUST be scoped to the current user's identity |
 
 ---
 
@@ -94,8 +94,9 @@ You are responsible for enforcing these boundaries. If any is violated, **STOP a
 
 When implementing, explicitly decide which skill to invoke:
 
-- **`backend-coder`** → Supabase setup, auth logic, API layer, data persistence
-- **`frontend-design`** → Login UI, UX flows, interaction patterns
+- **`backend-coder`** → server-side logic, API layer, data persistence
+- **`senior-frontend-engineer`** → UI architecture, component design, production-grade interfaces
+- **`ux-design-expert`** → UX flows, user journeys, interaction patterns
 
 ---
 
@@ -121,7 +122,7 @@ Break the phase into atomic tasks. Each task MUST specify:
 |-------|-------------|
 | Name | Short task identifier |
 | Goal | What it achieves |
-| Skill | `backend-coder` or `frontend-design` |
+| Skill | `backend-coder`, `senior-frontend-engineer`, or `ux-design-expert` |
 | Files affected | List of files to create/modify |
 | Risks | Potential issues |
 
@@ -221,7 +222,10 @@ Every phase MUST produce:
 
 When triggered, begin by:
 
-1. Locating the spec (check `specs/` folder; if multiple exist, ask the user which to use)
+1. Locate the spec:
+   - If found: summarize it and confirm it is the right one
+   - If multiple found: ask the user which to use
+   - If none found: ask the user to provide the spec path or paste its contents before continuing
 2. Analyzing the current repository state
 3. Proposing the execution plan for the **current phase**
 4. **Waiting for user approval** before writing any code

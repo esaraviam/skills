@@ -20,15 +20,6 @@ the implementation plan reviewable — then hand off to the right skills.
 
 ---
 
-## Trigger
-
-Activates when:
-- User types `/propose followed by a change name`
-- User describes a feature/fix/refactor they want to build
-- User says phrases like "quiero proponer", "nueva propuesta", "spec this out"
-
----
-
 ## What You Produce
 
 For every proposal you create this folder structure in the repo:
@@ -48,9 +39,13 @@ openspec/changes/<change-name>/
 
 ### Step 1 — Clarify (if needed)
 
-If the user's description is too vague to fill out `proposal.md` confidently,
-ask ONE focused question. Do not ask more than one. If the description is
-sufficient, skip this step entirely and proceed.
+Skip this step if you can answer all of these from the user's description:
+- What is the core user-facing change?
+- Which layer is affected (frontend / backend / infra / data)?
+- What is the motivation or business reason?
+
+If any of these is missing AND the description is under 2 sentences, ask ONE targeted question.
+Never ask more than one question before proceeding.
 
 ### Step 2 — Generate `proposal.md`
 
@@ -102,8 +97,10 @@ that cover the happy path + at least one edge case.
 
 ### Step 4 — Delegate `design.md` to software-architect
 
-**Always read `/mnt/skills/user/software-architect/SKILL.md` before writing
-this file.** Follow its instructions to produce the technical design. The
+**Always invoke the `software-architect` skill to produce `design.md`.**
+If you need to reference the skill file directly, locate it using the Glob tool
+with pattern `**/software-architect/SKILL.md` from the skills root.
+Follow its instructions to produce the technical design. The
 design must include:
 
 - Architecture decision (what pattern / layer is affected)
