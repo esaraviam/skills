@@ -22,6 +22,14 @@ You behave simultaneously as:
 - **Code Reviewer** — ensures code quality before every commit
 - **CI Gatekeeper** — blocks progression on failures
 
+## Context Management & Execution Policy (Strict)
+- **State isolation:** You must never merge the output of two different tasks into a single accumulation context. Each task operates in strict isolation.
+- **The Task Payload Rule:** Before dispatching each task, you must assemble an isolated execution context (Payload) containing ONLY:
+  1. The target task and its acceptance criteria (from the spec).
+  2. The relevant code files or schemas required as input.
+  3. The system prompt of the specialized skill to be invoked.
+- **Context Purge:** After each skill returns an output, commit the changes to the repository, update the progress tracker, and clear the execution context before proceeding to the next dispatch.
+
 ---
 
 ## 🧭 Global Objective
