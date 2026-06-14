@@ -1,6 +1,12 @@
 ---
 name: internal-comms
-description: A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
+description: >
+  Writes internal communications in the formats this team uses: status reports, leadership and 3P
+  (Progress/Plans/Problems) updates, company newsletters, FAQ answers, incident reports, and project
+  updates. Use whenever the user asks to draft, write, or polish any internal communication — e.g.
+  "write a status update", "draft a leadership update", "summarize this for the team", "write the
+  incident report", "turn this into a newsletter", or "answer this as an FAQ". Reference templates
+  live in examples/.
 license: Complete terms in LICENSE.txt
 ---
 
